@@ -7,6 +7,7 @@
 
 body {
     background: #c1c1c1;
+	font-size: 14px;
 }
 
 body,
@@ -14,7 +15,7 @@ input,
 select,
 textarea {
     color: #000;
-    font-family: "source-code-pro", Menlo, monospace, sans-serif
+    font-family: Helvetica, Arial, "sans-serif";
 }
 
 a {
@@ -67,7 +68,9 @@ textarea:-moz-placeholder {
 
 h1,
 h2 {
-    line-height: 42px
+    line-height: 1.5em;
+	font-size: 3rem;
+	padding:1rem 0;
 }
 
 h3 {
@@ -477,6 +480,7 @@ h5 {
     width: 90%;
     padding-top: 50px;
     max-width: 1700px;
+	
     
 }
 .container {
@@ -485,17 +489,20 @@ h5 {
     padding: 0 40px;
     margin: 0 auto;
     box-sizing:border-box;
-   font-family:  Helvetica, Arial, sans-serif;
+
 }
 .hero {
     background: #000000;
     color: #fff;
-    height: 70vh;
-    padding: 130px 0 0px;
+    min-height: 70vh;
+    padding: 130px 0 100px;
     position: relative;
     margin: 0 auto;
 }
-
+.hero:after {
+	content:"";
+	clear:both;
+}
 .hero .container {
     min-height: 200px;
     clear: both;
@@ -521,14 +528,6 @@ h5 {
 
 .hero a:after,
 .hero a:before,
-.hero h1 {
-    max-width: 610px;
-    color: #757575;
-    font-size: 1.7em;
-    font-weight: normal;
-
-}
-
 .hero .tagline {
     opacity: 0;
     animation-name: fadeInLeft;
@@ -570,9 +569,8 @@ h5 {
     transition: width .6s cubic-bezier(1, 0, 0, 1)
 }
 
-.hero a:hover:before,
-.pattern {
-    width: 100%
+.hero a:hover:before{
+    width: 100%;
 }
 
 .hero a:after {
@@ -592,7 +590,73 @@ h5 {
 .hero a:hover:after {
     opacity: 1
 }
-
+.clock {
+    width: 80%;
+	height:174px;
+	margin:0 auto;
+	border-bottom:5px solid #999;
+	position:relative;
+	
+}
+.clock span{
+	font-family:Helvetica, Arial, "sans-serif";
+    width: 40px;
+	height:25px;	
+	display:block;
+	text-indent: -15px;
+	color:#fff;
+	position:absolute;
+	bottom:-52px;
+	
+}
+.clock span:before{
+	content:"";
+	width: 4px;
+	height:30px;	
+	display:block;
+	background-color: #999;
+	position:absolute;
+	top:-40px;
+	left:0;
+}
+.clock span#c1{
+	left:16.67%;
+}
+.clock span#c2{
+	left:33.33%;
+}
+.clock span#c3{
+	left:50%;
+}
+.clock span#c4{
+	left:66.67%;
+}
+.clock span#c5{
+	left:83.33%;
+}
+.indicator{
+	width:100px;
+	height:174px;
+	float:left;
+	margin:0 0 0 16%;
+	background-image: url(../image/clock.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	transition: all 1s ease 0;
+}
+.profile {
+	font-family:Helvetica, Arial, "sans-serif";
+	width: 80%;
+	margin:100px auto;
+	text-align: center;
+	line-height: 2em;
+}
+.profile h1{
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	display: block;
+}
 .container .title{
     width: 50%;
     padding: 200px 0 150px 10% ;
